@@ -14,7 +14,7 @@ One top-level folder per consumer.
 | Folder      | Consumer              | Purpose                                                  |
 |-------------|-----------------------|----------------------------------------------------------|
 | `parsers/`  | flutter_image_viewer  | git submodule — hot-update parsers (since 2022).         |
-| `jigsaw/`   | apps/jigsaw           | Runtime config — currently `takedown.json` for emergency takedown of puzzle entries. |
+| `jigsaw/`   | apps/jigsaw           | Runtime config — `app_config.json` (takedowns, new-content marker, broadcast messages). |
 | `sudoku/`   | (future)              | Reserved.                                                |
 
 ## Editing
