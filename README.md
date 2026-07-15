@@ -11,11 +11,12 @@ URL pattern: `https://catpawprint.github.io/<app>/<file>`
 
 One top-level folder per consumer.
 
-| Folder      | Consumer              | Purpose                                                  |
-|-------------|-----------------------|----------------------------------------------------------|
-| `parsers/`  | flutter_image_viewer  | git submodule — hot-update parsers (since 2022).         |
-| `jigsaw/`   | apps/jigsaw           | Runtime config — `app_config.json` (takedowns, new-content marker, broadcast messages). |
-| `sudoku/`   | (future)              | Reserved.                                                |
+| Folder         | Consumer              | Purpose                                                  |
+|----------------|-----------------------|----------------------------------------------------------|
+| `parsers/`     | flutter_image_viewer  | git submodule — hot-update parsers (since 2022).         |
+| `jigsaw/`      | apps/jigsaw           | Runtime config — `app_config.json` (takedowns, new-content marker, broadcast messages). |
+| `sudoku/`      | (future)              | Reserved — sudoku app runtime config (JSON), like `jigsaw/`. |
+| `play/sudoku/` | flutter_sudoku (web)  | Playable Flutter/Flame **web demo** (static build; canvaskit via gstatic CDN). Funnel/demo, not config. |
 
 ## Editing
 
@@ -34,3 +35,7 @@ One top-level folder per consumer.
 - Schema versions live inside each JSON (e.g. `"version": 1`) so
   clients can fall back when they see a newer schema.
 - Commit history is public — be mindful in commit messages.
+- `play/` holds full static **web-app builds** (Flutter web), not config
+  JSON — updated by rebuild + copy, not hand-edited. Kept slim by loading
+  canvaskit from the gstatic CDN (the local `canvaskit/` folder is dropped
+  before copying, ~3.6 MB instead of ~40 MB).
