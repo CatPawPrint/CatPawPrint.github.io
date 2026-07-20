@@ -17,7 +17,6 @@ One top-level folder per consumer.
 | `jigsaw/`      | apps/jigsaw           | Runtime config — `app_config.json` (takedowns, new-content marker, broadcast messages). |
 | `numbercells/` | (future)              | Reserved — NumberCells app runtime config (JSON), like `jigsaw/`. |
 | `play/number-cells/` | number-cells (web) | Playable Flutter/Flame **web demo** — four games (sudoku, slide, calcudoku, binary). Static build; canvaskit via gstatic CDN. Funnel/demo, not config. |
-| `play/sudoku/` | (legacy)              | Redirect to `play/number-cells/`. The demo was sudoku-only before the NumberCells rename; kept so old links still work. |
 
 ## Editing
 
