@@ -15,8 +15,9 @@ One top-level folder per consumer.
 |----------------|-----------------------|----------------------------------------------------------|
 | `parsers/`     | flutter_image_viewer  | git submodule — hot-update parsers (since 2022).         |
 | `jigsaw/`      | apps/jigsaw           | Runtime config — `app_config.json` (takedowns, new-content marker, broadcast messages). |
-| `sudoku/`      | (future)              | Reserved — sudoku app runtime config (JSON), like `jigsaw/`. |
-| `play/sudoku/` | flutter_sudoku (web)  | Playable Flutter/Flame **web demo** (static build; canvaskit via gstatic CDN). Funnel/demo, not config. |
+| `numbercells/` | (future)              | Reserved — NumberCells app runtime config (JSON), like `jigsaw/`. |
+| `play/number-cells/` | number-cells (web) | Playable Flutter/Flame **web demo** — four games (sudoku, slide, calcudoku, binary). Static build; canvaskit via gstatic CDN. Funnel/demo, not config. |
+| `play/sudoku/` | (legacy)              | Redirect to `play/number-cells/`. The demo was sudoku-only before the NumberCells rename; kept so old links still work. |
 
 ## Editing
 
@@ -38,4 +39,4 @@ One top-level folder per consumer.
 - `play/` holds full static **web-app builds** (Flutter web), not config
   JSON — updated by rebuild + copy, not hand-edited. Kept slim by loading
   canvaskit from the gstatic CDN (the local `canvaskit/` folder is dropped
-  before copying, ~3.6 MB instead of ~40 MB).
+  before copying, ~3.8 MB instead of ~41 MB).
